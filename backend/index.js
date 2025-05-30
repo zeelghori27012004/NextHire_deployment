@@ -37,10 +37,11 @@ app.use("/api/job", jobRoute);
 app.use("/api/application", applicationRoute);
 
 // Serve static frontend files
-const frontendPath = path.join(__dirname, "frontend", "dist");
+const frontendPath = path.join(__dirname, '../frontend/dist');
 app.use(express.static(frontendPath));
 
 // SPA fallback for React Router with named wildcard
+// console.log({frontendPath});
 app.get("*", (_, res) => {
   res.sendFile(path.join(frontendPath, "index.html"));
 });
