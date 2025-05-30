@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: "http://localhost:5173", // Adjust if needed
+  origin: "https://nexthire-deployment.onrender.com", // Adjust if needed
   credentials: true,
 };
 app.use(cors(corsOptions));
